@@ -24,7 +24,7 @@ services:
     volumes:
       - /mnt/data/plex/config:/config
       - /mnt/data/plex/temp:/transcode
-      - /mnt/data/plex/media:/data
+      - /mnt/data/:/data
     networks:
       - vmnw
 networks:
