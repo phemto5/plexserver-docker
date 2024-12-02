@@ -1,7 +1,7 @@
 version: "3"
 services:
   plex:
-    dns: 192.168.1.21
+    dns: 192.168.1.55
     container_name: plex
     image: plexinc/pms-docker
     restart: unless-stopped
@@ -16,10 +16,6 @@ services:
       - "32413:32413/udp"
       - "32414:32414/udp"
     env_file: ./plex.env
-    # environment:
-    #   - TZ=us
-    #   - PLEX_CLAIM=<claimToken>
-    #   - ADVERTISE_IP=http://192.168.1.20:32400/
     hostname: plex
     volumes:
       - /mnt/data/plex/config:/config
