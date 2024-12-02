@@ -18,9 +18,9 @@ services:
     env_file: ./plex.env
     hostname: plex
     volumes:
-      - /mnt/data/plex/config:/config
-      - /mnt/data/plex/temp:/transcode
-      - /mnt/data/:/data
+      - ./config:/config
+      - ./temp:/transcode
+      - ./data:/data
     networks:
       - vmnw
 networks:
